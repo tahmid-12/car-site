@@ -84,7 +84,7 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
+  /* max-width: 1024px; */
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
@@ -125,6 +125,10 @@ img {
   align-items: center;
 }
 
+.nav__menu{
+  width: 40%;
+}
+
 .nav__logo,.nav__toogle{
   color: var(--title-color);
   display: inline-flex;
@@ -146,22 +150,25 @@ img {
 }
 
 .nav__toogle{
+  display: none;
   font-size: 1.25rem;
   cursor: pointer;
 }
 
 .nav__list{
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  row-gap: 3rem;
-  padding-top: 9rem;
+  justify-content: space-evenly;
+  /* flex-direction: column; */
+  /* text-align: center; */
+  /* row-gap: 3rem; */
+  /* padding-top: 0.5rem; */
 }
 
 .nav__link{
   text-transform: uppercase;
   color: var(--title-color);
-  font-size: var(--h1-font-size);
+  /* font-size: var(--h1-font-size); */
+  font-size: var(--font-medium);
   font-weight: var(--font-medium);
   transition: .3s;
 }
@@ -171,6 +178,7 @@ img {
 }
 
 .nav__close{
+  display: none;
   font-size: 2rem;
   color: var(--white-color);
   position: absolute;
@@ -241,6 +249,22 @@ img {
     height: 100%;
     backdrop-filter: blur(96px);
     transition: .3s;
+  }
+  .nav__list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+  }
+  .nav__link{
+    font-size: var(--h1-font-size);
+  }
+  .nav__toogle{
+    display: block;
+  }
+  .nav__close{
+    display: block;
   }
   .show-menu{
     right: 0;
