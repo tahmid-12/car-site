@@ -42,7 +42,7 @@ let swiperPopular = new Swiper(".popular__container", {
     spaceBetween: 24,
     slidePerView: 'auto',
     grabCursor: true,
-
+    slidesPerView:'auto',
     pagination: {
         el: ".swiper-pagination",
         dynamicBullets: true
